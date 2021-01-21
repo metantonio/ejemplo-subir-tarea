@@ -1,11 +1,17 @@
-from flask import Flask
+from flask import Flask, jsonify
+
 app = Flask(__name__) #instancia del servidor Flask
 
+todos = [
+    { "label": "My first task", "done": False },
+    { "label": "My second task", "done": False }
+]
 
 @app.route('/todos', methods=['GET']) #decorador
 def hello_world():
-    return "<h1>Hello, World!</h1>"
+    return jsonify(todos)
 #se mostraria en gitpod en: https://3245-c181d190-54dc-4dba-a45a-442802d9cead.ws-us03.gitpod.io/todos
+
 
 
 
