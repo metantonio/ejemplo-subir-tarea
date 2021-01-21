@@ -61,7 +61,7 @@
         {
             "slug": "02-pipenv-installation",
             "title": "02-pipenv-installation",
-            "done": false,
+            "done": true,
             "path": ".breathecode/exercises/02-pipenv-installation",
             "translations": [
                 "es",
@@ -72,7 +72,7 @@
         {
             "slug": "02.1-flask-installation",
             "title": "02.1-flask-installation",
-            "done": false,
+            "done": true,
             "path": ".breathecode/exercises/02.1-flask-installation",
             "translations": [
                 "es",
