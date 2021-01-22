@@ -14,7 +14,7 @@ def hello_world():
     return jsonify(todos)
 #se mostraria en gitpod en: https://3245-c181d190-54dc-4dba-a45a-442802d9cead.ws-us03.gitpod.io/todos
 
-@app.route('/todos', methods=['POST'])
+@app.route('/todos', methods=['POST']) #debería recibir una lista de diccionarios
 def add_new_todo():
     request_body = request.data
     decoded_object = json.loads(request_body)
@@ -27,6 +27,11 @@ def add_new_todo():
     else:
         return "Error 400"
     #return 'Response for the POST todo'
+    return jsonify(todos)
+
+@app.route('/todos/<int:position>', methods=['DELETE'])
+def delete_todo(position):
+    print("This is the position to delete: ",position)
     return jsonify(todos)
 
 
